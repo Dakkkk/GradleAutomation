@@ -6,7 +6,7 @@ package com.example.android.jokes_supply;
 
 /* Model for the endpoint data */
 
-public class MyData {
+public class MyBean {
 
     public String jokesData;
 

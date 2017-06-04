@@ -25,23 +25,23 @@ public class JokesEndpoint {
      * Endpoint method that takes a name and displays welcome message
      */
     @ApiMethod(name = "sayHi")
-    public MyData sayHi(@Named("name") String name) {
-        MyData response = new MyData();
+    public MyBean sayHi(@Named("name") String name) {
+        MyBean response = new MyBean();
         response.setJokesData("Welcome, " + name + " have fun!");
 
         return response;
     }
 
     @ApiMethod(name = "tellRandomJoke")
-    public MyData tellRandomJoke() {
-        MyData response = new MyData();
+    public MyBean tellRandomJoke() {
+        MyBean response = new MyBean();
         response.setJokesData(JokesFactory.randomJoke());
 
         return response;
     }
 
     @ApiMethod(name = "testMethod")
-    public MyData testMethod (){
-        return new MyData();
+    public MyBean testMethod (){
+        return new MyBean();
     }
 }
