@@ -1,6 +1,7 @@
 package com.example.android.gradleautomation;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -52,15 +53,12 @@ public class GetJokeTask extends AsyncTask<Void, Void, String> {
                     });
             myApiService = builder.build();
         }
-        return null;
-
-
-//        try {
-//            return null;
-//        } catch (IOException e) {
-//            Log.e(LOG_TAG, e.getMessage(), e);
-//            return "";
-//        }
+        try {
+            return myApiService.tellRandomJoke().execute().getJokesData();
+        } catch (IOException e) {
+            Log.e(LOG_TAG, e.getMessage(), e);
+            return "";
+        }
     }
 }
 

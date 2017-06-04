@@ -32,11 +32,16 @@ public class JokesEndpoint {
         return response;
     }
 
-    @ApiMethod(name = "randomJoke")
-    public MyData randomJoke() {
+    @ApiMethod(name = "tellRandomJoke")
+    public MyData tellRandomJoke() {
         MyData response = new MyData();
         response.setJokesData(JokesFactory.randomJoke());
 
         return response;
+    }
+
+    @ApiMethod(name = "testMethod")
+    public MyData testMethod (){
+        return new MyData();
     }
 }
