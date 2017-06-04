@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/GradleAutomation.iml" filepath="$PROJECT_DIR$/GradleAutomation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/jokes-display-library/jokes-display-library.iml" filepath="$PROJECT_DIR$/jokes-display-library/jokes-display-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jokes-supply/jokes-supply.iml" filepath="$PROJECT_DIR$/jokes-supply/jokes-supply.iml" />
       <module fileurl="file://$PROJECT_DIR$/jokeslibrary/jokeslibrary.iml" filepath="$PROJECT_DIR$/jokeslibrary/jokeslibrary.iml" />
     </modules>
   </component>
