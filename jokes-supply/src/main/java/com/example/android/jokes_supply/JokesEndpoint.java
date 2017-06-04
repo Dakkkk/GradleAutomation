@@ -1,5 +1,6 @@
 package com.example.android.jokes_supply;
 
+import com.example.android.jokeslibrary.JokesFactory;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
@@ -22,9 +23,17 @@ public class JokesEndpoint {
 
     /** Endpoint method that takes a name and displays welcome message */
     @ApiMethod(name = "sayHi")
-    public MyData sayHi(@Named("name") String name) {
+    public MyData sayHello(@Named("name") String name) {
         MyData response = new MyData();
         response.setJokesData("Welcome, " + name + " have fun!");
+
+        return response;
+    }
+
+    @ApiMethod(name = "randomJoke")
+    public MyData tellRandomJoke() {
+        MyData response = new MyData();
+        response.setJokesData(JokesFactory.randomJoke());
 
         return response;
     }
