@@ -53,7 +53,15 @@ public class GetJokeTask extends AsyncTask<Void, Void, String> {
             myApiService = builder.build();
         }
 
+
         return null;
+
+//        try {
+//            return null;
+//        } catch (IOException e) {
+//            Log.e(LOG_TAG, e.getMessage(), e);
+//            return "";
+//        }
     }
 }
 
