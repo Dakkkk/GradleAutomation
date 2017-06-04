@@ -52,9 +52,8 @@ public class GetJokeTask extends AsyncTask<Void, Void, String> {
                     });
             myApiService = builder.build();
         }
-
-
         return null;
+
 
 //        try {
 //            return null;

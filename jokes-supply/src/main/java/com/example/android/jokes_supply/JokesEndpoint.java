@@ -11,19 +11,21 @@ import com.google.api.server.spi.config.Named;
  */
 @Api(
         name = "myApi",
-        version = "v1",
+        version = "v2",
         namespace = @ApiNamespace(
                 ownerDomain = "jokes-supply.gradleautomation.android.mobileallin.com",
                 ownerName = "jokes-supply.gradleautomation.android.mobileallin.com",
-                packagePath=""
+                packagePath = ""
         )
 )
 
 public class JokesEndpoint {
 
-    /** Endpoint method that takes a name and displays welcome message */
+    /**
+     * Endpoint method that takes a name and displays welcome message
+     */
     @ApiMethod(name = "sayHi")
-    public MyData sayHello(@Named("name") String name) {
+    public MyData sayHi(@Named("name") String name) {
         MyData response = new MyData();
         response.setJokesData("Welcome, " + name + " have fun!");
 
@@ -31,7 +33,7 @@ public class JokesEndpoint {
     }
 
     @ApiMethod(name = "randomJoke")
-    public MyData tellRandomJoke() {
+    public MyData randomJoke() {
         MyData response = new MyData();
         response.setJokesData(JokesFactory.randomJoke());
 
