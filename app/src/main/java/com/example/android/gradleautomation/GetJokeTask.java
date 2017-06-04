@@ -13,6 +13,18 @@ public class GetJokeTask extends AsyncTask<Void, Void, String> {
     @SuppressWarnings("unused")
     public static String LOG_TAG = GetJokeTask.class.getSimpleName();
     private static MyApi myApiService = null;
+    private final Listener mListener;
+
+    /**
+     * Interface definition for a callback it will be invoked when jokes are loaded.
+     */
+    interface Listener {
+        void onJokeLoaded(String joke);
+    }
+
+    public GetJokeTask(Listener listener) {
+        mListener = listener;
+    }
 
 
     @Override
