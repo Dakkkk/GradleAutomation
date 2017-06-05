@@ -23,7 +23,7 @@ android {
             applicationId "com.example.android.gradleautomation.free"
         }
         premium {
-            applicationId "com.example.android.gradleautomation"
+            applicationId "com.example.android.gradleautomation.premium"
         }
     }
 
